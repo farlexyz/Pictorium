@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ResponsiveToaster } from "@/components/ResponsiveToaster";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -75,6 +76,7 @@ export default function RootLayout({
           <main id="main-content">{children}</main>
           <ResponsiveToaster />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
